@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import getData from './DataServices/DataServices';
 import Astronaut from './Interfaces/Interface';
+import AstronautComponent from './Components/AstronautComponent';
 
 function App() {
   const [astronautInfo, setAstronautInfo] = useState<Astronaut>();
@@ -16,7 +17,17 @@ function App() {
   })
   return (
     <div >
-      <h1>{astronautInfo?.people.map(person => person.name)}</h1>
+      {
+        astronautInfo?.people.map((astronaut, index) => {
+          return (
+            <div>
+              <AstronautComponent name={astronaut.name} craft={astronaut.craft} />
+              </div>
+            
+          )
+        })
+      }
+      {/* <AstronautComponent props={astronautInfo}/> */}
     </div>
   );
 }
