@@ -20,10 +20,9 @@ function App() {
       {
         astronautInfo?.people.map((astronaut, index) => {
           return (
-            <div>
+            <div key={index}>
               <AstronautComponent name={astronaut.name} craft={astronaut.craft} />
               </div>
-            
           )
         })
       }
