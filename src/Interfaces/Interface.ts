@@ -1,12 +1,12 @@
 type Astronaut = {
     message: string,
-    people: AstronautInfo[],
+    crafts: AstronautInfo[],
     number: number
 }
 
 type AstronautInfo = {
-    name: string,
-    craft: string
+    shipName: string,
+    members: string[]
 }
 
 export default Astronaut
