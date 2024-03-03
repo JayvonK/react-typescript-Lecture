@@ -1,12 +1,12 @@
 type Astronaut = {
-    message: string,
-    crafts: AstronautInfo[],
-    number: number
-}
+  message: string;
+  crafts: AstronautInfo[];
+  number: number;
+};
 
 type AstronautInfo = {
-    shipName: string,
-    members: string[]
-}
+  shipName: string;
+  members: string[];
+};
 
-export default Astronaut
+export default Astronaut;
